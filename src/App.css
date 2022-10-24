@@ -1,0 +1,181 @@
+.App {
+  text-align: center;
+
+}
+
+.header {
+  padding:20px;
+  background-color: #464646;
+  display: flex;
+  flex-direction: row;
+
+}
+.statusOfCases {
+  font-size: 32px;
+  display: flex;
+  align-items: end;
+  padding: 0 0 18px 60px;
+}
+.searchBlock {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.search{
+  border: 1px solid #999;
+  border-radius: 5px;
+  background-color: #ececec;
+  padding-left: 10px;
+  margin: 20px 0 0 5%;
+  width: 70%;
+
+}
+/*radio btn*/
+.form_toggle {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+
+}
+.form_toggle-item {
+  float: left;
+  display: inline-block;
+}
+.form_toggle-item input[type=radio] {
+  display: none;
+}
+.form_toggle-item label {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 34px;
+  border: 1px solid #999;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form_toggle .item-1 .item-2 .item-3 label {
+  border-radius: 6px;
+}
+/* Checked */
+.form_toggle .item-1 input[type=radio]:checked + label {
+  background: #bbffbb;
+}
+.form_toggle .item-2 input[type=radio]:checked + label {
+  background: #bbffbb;
+}
+.form_toggle .item-3 input[type=radio]:checked + label {
+  background: #bbffbb;
+}
+
+.taskBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.itemBox {
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #999;
+  margin: 5px 0 0 5%;
+  width: 69%;
+  height: 35px;
+  border-radius: 5px;
+  color: #999;
+}
+.inputTask {
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #999;
+  margin: 5px 0 0 5%;
+  width: 63%;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #ececec;
+
+}
+.inputBox {
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.btn {
+  color: #999;
+  margin: 3px;
+  width: 27px;
+  height: 27px;
+}
+.btn:before {
+
+}
+.btn:hover {
+  background: #bbffbb;
+}
+.addTask-btn {
+  color: #999;
+  border: 1px solid ;
+  border-radius: 5px;
+  margin: 5px;
+  height: 36px;
+  width: 70px;
+}
+.addTask-btn:hover {
+  background: #424242;
+}
+
+
+
+
+.logo {
+  font-size: 96px;
+  color: aliceblue;
+  align-items: end;
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(3px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-3px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.logo:before,
+.logo:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.logo:before {
+  animation: glitchTop 1s linear infinite;
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
