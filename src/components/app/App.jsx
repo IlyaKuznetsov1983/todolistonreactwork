@@ -16,30 +16,71 @@ class App extends React.Component {
                     {id: 2, label: 'Learn Redux'},
                     {id: 3, label: 'Learn JS'},
                 ],
-                done: true
+                searchText: ''
             }
         }
-        onRemove (id) {
-            this.setState((state) => {
-                const index = state.items.findIndex((item) => item.id === id)
-                const items = [
-                    ...state.items.slice(0, index),
-                    ...state.items.slice(index + 1)
-                ]
-                return {items}
+
+        setSearchText = (text) => {
+            this.setState({
+                searchText: text
             })
         }
 
+    onRemove (id) {
+        this.setState((state) => {
+            const index = state.items.findIndex((item) => item.id === id)
+            const items = [
+                ...state.items.slice(0, index),
+                ...state.items.slice(index + 1)
+            ]
+            console.log({items})
+            return {items}
+        })
+    }
+
+id = 4
+
+        onAddItem = (label) => {
+            this.setState((state) => {
+                const item = {id: ++this.id, label: label}
+                return {
+                    items: [...state.items, item]
+                }
+            })
+        }
+
+
+    onSearchChange = (search) => {
+        if (search.lenght === 0) {
+            return this.state.items
+        }
+
+        return this.state.items.filter(item => {
+            return item.label.toLowerCase().indexOf(search.toLowerCase()) > -1
+        })
+    }
+
+
+
+
+
+
+
+
    render () {
+
+          const visibleItems = this.onSearchChange(this.state.searchText)
+
        return (
            (<div>
                <section>
                    <Header/>
-                   <SearchPanel/>
-                   <ItemStatusFilter/>
-                   <TodoList items={this.state.items}
+                   <SearchPanel setSearchText={this.setSearchText}/>
+
+                   <ItemStatusFilter />
+                   <TodoList items={visibleItems}
                              onRemove={(id) => this.onRemove(id)}/>
-                   <ItemAddForm/>
+                   <ItemAddForm onAddItem={this.onAddItem}/>
                </section>
            </div>)
        );
