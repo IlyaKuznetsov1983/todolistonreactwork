@@ -1,0 +1,10 @@
+.item {
+    font-size: 20px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+.mark {
+    color: red;
+}
