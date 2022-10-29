@@ -1,10 +1,15 @@
+body {
+    background-color: rgba(230, 229, 199, 0.26);
+}
+
+
 .item {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .done {
     text-decoration: line-through;
 }
 .mark {
-    color: red;
+    color: rgb(211, 81, 81);
 }
