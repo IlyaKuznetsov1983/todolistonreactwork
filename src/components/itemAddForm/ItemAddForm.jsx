@@ -33,7 +33,7 @@ class ItemAddForm extends Component {
                 value={this.state.label}
                 onChange={this.onLabelChange}
             />
-            <button >Добавить задание</button>
+            <button >Add Task</button>
         </form>
     }
 

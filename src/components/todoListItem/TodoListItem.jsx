@@ -43,8 +43,8 @@ class TodoListItem extends React.Component {
             <span className={styleMark} onClick={this.onToggleDone}>
                 {this.props.label}
             </span>
-                <button onClick={this.props.onRemove}>D</button>
-                <button onClick={this.onMark}>!</button>
+                <button onClick={this.props.onRemove}>bye</button>
+                <button onClick={this.onMark}>yeah</button>
             </div>)
 
     }

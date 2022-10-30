@@ -2,8 +2,8 @@ import React from "react";
 
 const Header = () => {
    return (<div>
-        <h1>LIST</h1>
-        <h2>2 нужно сделать . 1 выполнен </h2>
+        <h1>TodoList</h1>
+        <h2>2 execute . 1 check out</h2>
 
     </div>
    )
