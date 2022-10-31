@@ -1,25 +1,25 @@
 import React from "react";
 import './todoListItem.css';
 
+// onToggleDone = () => {
+//     this.setState((state) => {
+//         return {
+//             done: !state.done
+//         }
+//     })
+// }
 
 class TodoListItem extends React.Component {
 
-    state = {
-        done: false,
-        mark: false
-    }
+state = {
 
-    onToggleDone = () => {
-        this.setState((state) => {
-            return {
-                done: !state.done
-            }
-        })
-    }
+}
+
+
     onMark = () => {
         this.setState((state) => {
             return {
-                mark: !state.mark
+                mark: !state.important
             }
         })
     }

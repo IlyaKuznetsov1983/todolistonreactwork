@@ -10,9 +10,14 @@ const filterButtons = [
 
 
 
-const ItemStatusFilter = () => {
+const ItemStatusFilter = ({onFilter}) => {
     const buttons = filterButtons.map(button => {
-        return <button key={button.name}>{button.label}</button>
+        return <button key={button.name}
+                       onClick={() => onFilter(button.name)}
+        >
+
+            {button.label}
+        </button>
 
     })
     return <div>

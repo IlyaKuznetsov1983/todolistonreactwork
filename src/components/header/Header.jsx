@@ -1,12 +1,14 @@
 import React from "react";
 
-const Header = () => {
-   return (<div>
-        <h1>TodoList</h1>
-        <h2>2 execute . 1 check out</h2>
+const Header = ({doneCounter, toDoCounter}) => {
+    return (<div>
+            <h1>TodoList</h1>
+            <h2><span>{toDoCounter}</span> TODO TASKS !
+                 <span>!!!!!!!!{doneCounter}</span>DONE
+            </h2>
 
-    </div>
-   )
+        </div>
+    )
 }
 
 export default Header

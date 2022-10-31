@@ -7,6 +7,7 @@ const TodoList = ({items, onRemove}) => {
             <TodoListItem
                 label={label}
                 onRemove={() => onRemove(id)}
+                onToggleDone ={()=> console.log('onToggleDone')}
             />
         </li>
     })
